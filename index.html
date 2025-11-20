@@ -12083,8 +12083,8 @@ const isNewWeek = existingWeekIndex === -1;
 if (position === 'WR' || position === 'TE') {
 const tgt = parseFloat(row.TGT) || 0;
 const rzTgt = parseFloat(row['RZ TGT']) || parseFloat(row.RZ_TGT) || 0;
-const usageShare = (parseFloat(row.Usage_Share) || 0) * 100; // Convert decimal to percentage
-const rzShare = (parseFloat(row.RZ_Share) || 0) * 100; // Convert decimal to percentage
+const usageShare = parseFloat(row.Usage_Share) || 0; // Already a percentage in CSV
+const rzShare = parseFloat(row.RZ_Share) || 0; // Already a percentage in CSV
 const rec = parseFloat(row.REC) || 0;
 const air = parseFloat(row.AIR) || 0;
 const catchable = parseFloat(row.CATCHABLE) || 0;
@@ -12130,8 +12130,8 @@ const rzRushAtt = parseFloat(row['RZ_RUSH_ATT']) || 0;
 const rzTgt = parseFloat(row['RZ TGT']) || parseFloat(row['RZ_TGT']) || 0;
 const rushAtt = parseFloat(row.ATT) || 0;
 const tgt = parseFloat(row.TGT) || 0;
-const usageShare = (parseFloat(row.Usage_Share) || 0) * 100; // Convert decimal to percentage
-const rzShare = (parseFloat(row.RZ_Share) || 0) * 100; // Convert decimal to percentage
+const usageShare = parseFloat(row.Usage_Share) || 0; // Already a percentage in CSV
+const rzShare = parseFloat(row.RZ_Share) || 0; // Already a percentage in CSV
 const rushYds = parseFloat(row.YDS) || 0;
 const recYds = parseFloat(row.REC_YDS) || 0;
 const ybcon = parseFloat(row.YBCON) || 0;
